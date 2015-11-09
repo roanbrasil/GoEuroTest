@@ -1,0 +1,14 @@
+goeuro/devtest/reader/PropertiesReader.class
+goeuro/devtest/pojo/GoEuroObject.class
+goeuro/devtest/pojo/RestUtil.class
+goeuro/devtest/pojo/ErrorMessage.class
+goeuro/devtest/pojo/GeoPosition.class
+goeuro/devtest/core/GoEuroClient.class
+goeuro/devtest/config/Config.class
+goeuro/devtest/config/InvalidConfig.class
+goeuro/devtest/writer/CSVGenerator.class
+goeuro/devtest/client/GoEuroApplication.class
+goeuro/devtest/core/GoEuroClient$1.class
+goeuro/devtest/config/DefaultConfig.class
+goeuro/devtest/exception/GoEuroException.class
+goeuro/devtest/exception/GoEuroErrorHandler.class
