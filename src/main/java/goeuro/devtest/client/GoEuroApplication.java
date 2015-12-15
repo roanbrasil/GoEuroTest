@@ -16,7 +16,6 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
@@ -34,7 +33,7 @@ public class GoEuroApplication implements CommandLineRunner {
 
 	private static final Logger log = LoggerFactory
 			.getLogger(GoEuroApplication.class);
-	
+
 	/**
 	 * Main method
 	 * 
@@ -43,10 +42,43 @@ public class GoEuroApplication implements CommandLineRunner {
 	public static void main(String[] args) {
 
 		log.info("*************** Beginning Processing Go Euro API ***************");
-		
-		SpringApplication.run(GoEuroApplication.class, args);
-		
+
+		// SpringApplication.run(GoEuroApplication.class, args);
+
 		log.info("*************** Ending Processing Go Euro API ***************");
+		
+		String um = "https://docs.google.com/document/d/1yT4dY_d8zDbm8mC-vq0Md5jqCX6_aA4VSJonbkbSShw/edit?usp=sharing";
+		String dois = "https://zookeeper.apache.org/doc/r3.1.2/zookeeperStarted.html";
+		List<String> list = new ArrayList<>();
+		list.add(um);
+		list.add(dois);
+		list.add(dois);
+		list.add(dois);
+		List<String> novaList = GoEuroApplication.printRepeatedElements(list);
+		for(String s: novaList){
+			System.out.println(s);
+		}
+
+	}
+
+	public  static List<String> printRepeatedElements(List<String> inputFileElements) {
+		List<String> newList = new ArrayList<String>();
+		for (int i = 0; i < inputFileElements.size(); i++) {
+			if (newList.isEmpty()) {
+				newList.add(inputFileElements.get(i));
+			} else {
+				int count = 0;
+				for (String s : newList) {
+					if (inputFileElements.get(i).equals(s)) {
+						count++;
+					}
+				}
+				if (count == 0) {
+					newList.add(inputFileElements.get(i));
+				}
+			}
+		}
+		return newList;
 	}
 
 	/**
